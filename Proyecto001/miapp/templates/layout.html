@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+
+        {% block title %}
+        JEANCILLO
+        {% endblock %}
+            
+        </title>
+        {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <header >
+            
+            <div id="logotipo">
+            <img src="{% static 'css/img/logoDjango.png' %}">
+            Proyecto Web (LP3) -JC
+            </div>
+        </header>
+        <nav>
+            <h1>
+                Proyecto Web (LP3) -JC
+
+        </h1>
+           <ul>
+        <li>
+            <a href="/inicio">Inicio</a>
+        </li>
+        <li>
+            <a href="/saludo">Mensaje de saludo</a>
+        <li>
+            <a href="/rango">Mostar Numeros [a,b]</a>
+        </li>
+        </ul> 
+        </nav>
+        <div class="barra">
+            <span class="esquina-izquierda"></span>
+            <span class="esquina-barra"></span>
+            <span class="esquina-derecha"></span>  
+        </div>
+
+
+        <div id="content">
+            <div class="box">
+            <h2 class="title">titulo de contenido(de prueba)</h2>
+        {% block content %}
+        <strong>Contenido en Layout(Padre)</strong>
+        {% endblock %}
+
+        </div>
+        </div>
+        <footer>
+            UNTELS - LP3 &COPY; Jean Cruz
+        </footer>
+
+    </body>
+
+</html>

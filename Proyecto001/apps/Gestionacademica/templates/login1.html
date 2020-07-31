@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+
+<!-- action indica hacia que pestaña se redirige-->
+<form class="login" action="/registro/" method="GET"> 
+  <html lang="en">
+  <head>
+    <title>
+      Login de Usuario
+    </title>
+    <link rel="stylesheet" href="{% static 'css/login2.css' %}">
+  </head>
+  <body>
+
+  <fieldset>
+    <table class="login">
+      <thead>  
+        <tr>
+          <th>
+            Login
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Usuario: </td>
+          <td><input  class="input" type="text"name="f_usuario" placeholder="Ingrese usuario" required /></td>
+        </tr>
+        <tr>
+          <td>Clave: </td>
+          <td><input class="input" type="password" name="f_clave" placeholder="Ingrese contraseña" required /></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input class="submit" type="submit" value="Ingresar" name="f_enviar" /></td>
+      </tr>
+      </tbody>
+    </table>
+    
+  </fieldset>
+   
+</form>
+</body>
+</html>
